@@ -10,18 +10,22 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     String s = new String("abc");
-    View.OnClickListener listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
 
-        }
-    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button bHelp = (Button) findViewById(R.id.b_help);
-         bHelp.setOnClickListener(listener);
+         bHelp.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 new AlertDialog.Builder(MainActivity.this)
+                 .setTitle("BMI說明")
+                 .setMessage("說明內容")
+                         .setPositiveButton("確定",null)
+                         .show();
+             }
+         });
 
         getResources().getString(R.string.app_name);
 
