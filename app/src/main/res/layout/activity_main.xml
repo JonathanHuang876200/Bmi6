@@ -10,10 +10,12 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Weight"
+        android:text="@string/weight"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="33dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
         android:id="@+id/ed_weight"
@@ -23,18 +25,18 @@
         android:inputType="numberDecimal"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Height"
+        android:text="@string/height"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/ed_weight"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="@+id/ed_weight" />
 
     <EditText
@@ -45,17 +47,27 @@
         android:inputType="numberDecimal"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="@+id/textView6" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/b_bmi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="7dp"
         android:onClick="bmi"
-        android:text="calculate"
+        android:text="@string/calculate"
         app:layout_constraintLeft_toLeftOf="@+id/ed_height"
         app:layout_constraintTop_toBottomOf="@+id/ed_height" />
+
+    <Button
+        android:id="@+id/b_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/info"
+        app:layout_constraintLeft_toLeftOf="@+id/b_bmi"
+        app:layout_constraintTop_toBottomOf="@+id/b_bmi" />
 </android.support.constraint.ConstraintLayout>
